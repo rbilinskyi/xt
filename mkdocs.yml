@@ -1,0 +1,36 @@
+site_name: VitaXt Docs
+site_url: https://example.com/xt
+
+theme:
+  name: material
+  language: uk
+  font: false  # Вимикає стандартні шрифти Material
+  palette:
+    # Автоматичне перемикання темної/світлої теми
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - search.share
+  theme:
+  name: material
+  language: uk
+  font: false
+  palette:
+    scheme: slate      # Завжди темна тема
+    primary: black     # Основний колір (або neon, залежно від смаку)
+    accent: purple     # Акцентний колір для посилань та кнопок
+nav:
+  - Головна: index.md
+  - Початок роботи: getting-started.md
+
+extra_css:
+  - stylesheets/extra.css
