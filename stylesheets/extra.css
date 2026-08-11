@@ -4,12 +4,13 @@
 }
 /* Збільшити інтервал між рядками для кращої читабельності */
 body {
-  line-height: 1.6;
+  line-height: 1.25;
+  background-color: #000000 !important;
 }
 
 /* Зробити блоки коду більш контрастними */
 code {
-  background-color: #f0f0f0 !important;
+  background-color: #00000029 !important;
   color: #fff !important;
 }
 /* Підключаємо основний моноширинний шрифт для всього сайту */
@@ -23,16 +24,16 @@ code, pre, .md-code {
 
 /* Налаштування загального стилю (атмосфера темного термінала) */
 body {
-  line-height: 1.6;
+  line-height: 1.25;
 }
 
 /* Стилізація блоків коду, щоб вони виділялися */
 pre code {
-  background-color: transparent !important;
+  background-color: #1f1f1f !important;
 }
 
 code {
-  background-color: rgba(128, 128, 128, 0.15) !important;
+  background-color: #1f1f1f !important;
   padding: 2px 5px;
   border-radius: 3px;
 }
@@ -46,4 +47,34 @@ a.md-anchor, markdown-content a {
 .md-typeset h1 {
   border-bottom: 2px dashed currentColor;
   padding-bottom: 5px;
+}
+/* Приховати весь футер */
+footer.md-footer {
+  display: none;
+}
+.md-nav--primary .md-nav__title {
+  background: rgb(119, 21, 189);
+  color: var(--color);
+  border: .15rem solid #0000001f;
+  margin: .25rem -.75rem .25rem -2.3rem;
+  padding-right: 1rem;
+  padding-left: 3rem;
+  transition-duration: .3s;
+  transform: none;
+  box-shadow: 0 .1rem .5rem #0000007f;
+}
+ .md-nav--secondary .md-nav__title {
+  background: rgb(119, 21, 189);
+  color: var(--color);
+  border: .15rem solid #0000001f;
+  margin: .25rem -.75rem .25rem -2.3rem;
+  padding-right: 1rem;
+  padding-left: 3rem;
+  transition-duration: .3s;
+  transform: none;
+  box-shadow: 0 .1rem .5rem #0000007f;
+}
+/* Робить чорну іконку чисто білою */
+img[src*="cloud.svg"] {
+  filter: brightness(0) invert(1);
 }
