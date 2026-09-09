@@ -1,30 +1,24 @@
+/* Підключення шрифту Inconsolata з Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 :root {
-  --md-text-font: "Lucida Console", "Courier New", monospace;
-  --md-code-font: "Lucida Console", "Courier New", monospace;
+  --md-text-font: "Inconsolata", monospace;
+  --md-code-font: "Inconsolata", monospace;
 }
-/* Збільшити інтервал між рядками для кращої читабельності */
+
+/* Збільшити інтервал між рядками для кращої читабельності та чорний фон */
 body {
   line-height: 1.25;
   background-color: #000000 !important;
 }
 
-/* Зробити блоки коду більш контрастними */
-code {
-  background-color: #00000029 !important;
-  color: #fff !important;
-}
-/* Підключаємо основний моноширинний шрифт для всього сайту */
-body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Lucida Console", "Courier New", monospace !important;
+/* Підключаємо шрифт Inconsolata для всього сайту та заголовків */
+body, h1, h2, h3, h4, h5, h6, .md-typeset, .md-nav, .md-header {
+  font-family: "Inconsolata", monospace !important;
 }
 
 code, pre, .md-code {
-  font-family: "Lucida Console", "Courier New", monospace !important;
-}
-
-/* Налаштування загального стилю (атмосфера темного термінала) */
-body {
-  line-height: 1.25;
+  font-family: "Inconsolata", monospace !important;
 }
 
 /* Стилізація блоків коду, щоб вони виділялися */
@@ -36,22 +30,25 @@ code {
   background-color: #1f1f1f !important;
   padding: 2px 5px;
   border-radius: 3px;
+  color: #fff !important;
 }
 
-/* Кастомізація посилань (робимо їх більш яскравими, у стилі сайбер/гік) */
+/* Кастомізація посилань */
 a.md-anchor, markdown-content a {
   text-decoration: underline;
 }
 
-/* Додаємо ефект "рамки" або акценту для заголовків або блоків, якщо хочеться ретро-вайбу */
+/* Ефект "рамки" або акценту для заголовків */
 .md-typeset h1 {
   border-bottom: 2px dashed currentColor;
   padding-bottom: 5px;
 }
+
 /* Приховати весь футер */
 footer.md-footer {
   display: none;
 }
+
 .md-nav--primary .md-nav__title {
   background: rgb(119, 21, 189);
   color: var(--color);
@@ -63,7 +60,8 @@ footer.md-footer {
   transform: none;
   box-shadow: 0 .1rem .5rem #0000007f;
 }
- .md-nav--secondary .md-nav__title {
+
+.md-nav--secondary .md-nav__title {
   background: rgb(119, 21, 189);
   color: var(--color);
   border: .15rem solid #0000001f;
@@ -74,6 +72,7 @@ footer.md-footer {
   transform: none;
   box-shadow: 0 .1rem .5rem #0000007f;
 }
+
 /* Робить чорну іконку чисто білою */
 img[src*="cloud.svg"] {
   filter: brightness(0) invert(1);
